@@ -1,6 +1,58 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Register</title>
+        <title>Registration</title>
     </head>
-    <body>Register Page</body>
+    
+    <body>
+        <form>
+            First name:<br>
+            <input type="text" name="firstname">          
+	    <br>
+	    
+	    <br>
+    	    Last name:<br>
+            <input type="text" name="lastname">
+	    <br>
+
+	    <br>
+    	    Photo:<br>
+            <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+	    <br>
+	   
+	    <br>
+    	    Email:<br>
+            <input type="email" name="email">
+	    <br>
+
+            <br>
+    	    Password:<br>
+            <input type="password" name="password">
+	    <br>
+
+
+	    <br>
+    	    Phone number:<br>
+            <input type="tel" name="pnumber">
+	    <br>
+
+	    <br>
+    	    Address:<br>
+            <input type="text" name="address">
+	    <br>
+
+	    <br>    	   
+            <input type="radio" name="clientvendor" value="client" checked>
+	    Client
+
+            <input type="radio" name="clientvendor" value="vendor">
+	    Vendor
+            <br>
+
+	    <br>
+	    <input type="submit" name="submit" value="Join Now">           
+ 
+        </form>
+    
+    </body>
 </html>
