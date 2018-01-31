@@ -3,9 +3,23 @@
         <title>Login</title>
     </head>
     <body>
-        <h1>Login</h1>
-        <!-- Login button links to business_account.html or planner_account.html or here with incorrect login !-->
-        <a href="register.html">Register</a><br>
-        <a href="password_recovery.html">Password Recovery</a>
+    
+        <form>
+	    <br>
+	    Email:  
+            <input type="email" name="email">
+	    <br>
+
+	    <br>
+	    Password:
+	    <input type="password" name="password">
+	    <br>
+	    
+	    <br>
+	    <input type="button" onclick="location.href='register.html';" value="Register">
+	    <input type="submit" name="submit" value="Submit">
+	</form>
+
+	<a href="password_recovery.html">Forgot Username/Password</a>
     </body>
 </html>
