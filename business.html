@@ -1,6 +1,46 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Business</title>
+        <style>
+            .page-section {
+                display: inline-block;
+                vertical-align: top;
+                width: 300px;
+                height: 150px;
+                margin: 10px;
+            }
+            .business-info {
+                display: inline-block;
+                vertical-align: top;
+            }
+            #business-picture {
+                max-width: 100%;
+                height: auto;
+            }
+            .sender {
+                text-align: right;
+            }
+        </style>
     </head>
-    <body>Selected Business</body>
+    <body>
+        <h1>Tacos El Gordo</h1>
+        <img class="business-info" id="business-picture" src=img/TACOS.png alt="Tacos El Gordo">
+        <div class="business-info">
+            Contact Information:<br>
+            Phone-Number:<br>
+            E-mail:<br>
+            Address:<br>
+        </div><br>
+        <div class="page-section">
+            To-Do List
+            <ol>
+                <li>Example To-Do Item</li>
+            </ol>
+        </div>
+        <div class="page-section">
+            <header>Chat</header>
+            <!-- Dynamically updated later with JS !-->
+        </div>
+    </body>
 </html>
