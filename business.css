@@ -1,0 +1,61 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+.page-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    height: 500px;
+    margin: 10px;
+}
+#business-picture {
+    max-width: 100%;
+    height: auto;
+}
+.sender {
+    text-align: right;
+}
+#nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.nav-item {
+    float: left;
+    width: 100px;
+}
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-item a:hover {
+    background-color: #0054B2;
+}
+.active {
+    background-color: #00ADFF;
+}
+#contact-info {
+    font-size: 1.1em;
+}
+.title {
+    position: relative;
+    text-align: center;
+    color: antiquewhite;
+}
+.title-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#title-img {
+    width:100%; 
+    height:150px; 
+    object-fit: cover;
+}

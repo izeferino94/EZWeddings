@@ -2,70 +2,44 @@
 <html>
     <head>
         <title>Business</title>
-        <style>
-            .page-section {
-                display: inline-block;
-                vertical-align: top;
-                width: 300px;
-                height: 150px;
-                margin: 10px;
-            }
-            #business-picture {
-                max-width: 40%;
-                height: auto;
-            }
-            .sender {
-                text-align: right;
-            }
-            #nav-bar {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
-            .nav-item {
-                float: left;
-                width: 100px;
-            }
-            .nav-item a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-            .nav-item a:hover {
-                background-color: #0054B2;
-            }
-            .active {
-                background-color: #00ADFF;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link rel="stylesheet" href="business.css">
     </head>
     <body>
+        
         <ul id="nav-bar">
             <li class="nav-item"><a href="planner_account.html">Home</a></li>
             <li class="nav-item"><a href="planner_settings.html">Settings</a></li>
             <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
         </ul>
-        <h1>Fairbanks Ranch Country Club</h1>
-        <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue">
-        <div>
-            Contact Information:<br>
-            Phone-Number: 858-356-2135<br>
-            E-mail: info.frcc@bayclubs.com<br>
-            Address: 15150 San Dieguito Road, Rancho Santa Fe, CA 92067<br>
-        </div><br>
-        <div class="page-section">
-            To-Do List
-            <ol>
-                <li>Example To-Do Item</li>
-            </ol>
+        
+        <div class="title">
+          <img id="title-img" src="img/title_bg.jpeg" alt="beach">
+          <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
         </div>
-        <div class="page-section">
-            <header>Chat</header>
-            <!-- Dynamically updated later with JS !-->
+        <div align="center">
+            <div class="page-section">
+                <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
+                <p id="contact-info">
+                    <b>Contact Information</b><br>
+                    <b>Phone-Number:</b> <i>858-356-2135</i><br>
+                    <b>E-mail:</b> <i>info.frcc@bayclubs.com</i><br>
+                    <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
+                </p>
+            </div>
+
+            <div class="page-section">
+                To-Do List
+                <ol>
+                    <li>Example To-Do Item</li>
+                </ol>
+            </div>
+
+            <div class="page-section">
+                <header>Chat</header>
+                <!-- Dynamically updated later with JS !-->
+            </div>
         </div>
+        
     </body>
 </html>
