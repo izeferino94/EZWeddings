@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Business</title>
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
         <link rel="stylesheet" href="business.css">
     </head>
     <body>
-        
         <ul id="nav-bar">
             <li class="nav-item"><a href="planner_account.html">Home</a></li>
             <li class="nav-item"><a href="planner_settings.html">Settings</a></li>
@@ -17,7 +17,8 @@
           <img id="title-img" src="img/title_bg.jpeg" alt="beach">
           <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
         </div>
-        <div align="center">
+        
+        <div>
             <div class="page-section">
                 <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
                 <p id="contact-info">
@@ -27,14 +28,14 @@
                     <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
                 </p>
             </div>
-
             <div class="page-section">
                 To-Do List
-                <ol>
-                    <li>Example To-Do Item</li>
-                </ol>
+                <ul id="todo-list">
+                    <li class="todo-item"><a>pending thing #1</a></li>
+                    <li class="todo-item"><a>pending thing #1</a></li>
+                </ul>
+                <button id="todo-list-add">Add</button>
             </div>
-
             <div class="page-section">
                 <header>Chat</header>
                 <!-- Dynamically updated later with JS !-->
