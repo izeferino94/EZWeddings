@@ -18,7 +18,7 @@
           <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
         </div>
         
-        <div align="center">
+        <div style="text-align: center;">
             <div class="page-section">
                 <h3>Contact Information</h3>
                 <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
@@ -30,24 +30,51 @@
             </div>
             <div class="page-section">
                 <h3>To Do List</h3>
-                <ul id="todo-list">
-                    <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
-                    <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
-                </ul>
+                <div id="list-container">
+                    <ul id="todo-list">
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                    </ul>
+                </div>
                 <button id="todo-list-add" onclick="alert('This will be a pop-up form for adding new items, need to implement with JS.')">Add</button>
             </div>
             <div class="page-section">
                 <h3>Chat</h3>
-                <div class="chat-msg">
-                    You: Do you think we can allocate more time on our reservation?
-                </div>
-                <div class="chat-msg">
-                    Fairbanks: Sure, add it to the to do list, so I can remember to do that.
-                </div>
-                <div class="chat-msg">
-                    You: Okay, thanks.
+                <div id="chat-box">
+                    <div class="chat-msg">
+                        You:<br/> Do you think we can allocate more time on our reservation?
+                    </div>
+                    <div class="chat-msg">
+                        Fairbanks:<br/> Sure, add it to the to do list, so I can remember to do that.
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Okay, thanks.
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
                 </div>
                 <!-- Dynamically updated later with JS !-->
+                <input id="msg-input" type="text" name="msg" placeholder="Type message...">
             </div>
         </div>
         
