@@ -18,26 +18,35 @@
           <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
         </div>
         
-        <div>
+        <div align="center">
             <div class="page-section">
+                <h3>Contact Information</h3>
                 <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
                 <p id="contact-info">
-                    <b>Contact Information</b><br>
                     <b>Phone-Number:</b> <i>858-356-2135</i><br>
                     <b>E-mail:</b> <i>info.frcc@bayclubs.com</i><br>
                     <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
                 </p>
             </div>
             <div class="page-section">
-                To-Do List
+                <h3>To Do List</h3>
                 <ul id="todo-list">
-                    <li class="todo-item"><a>pending thing #1</a></li>
-                    <li class="todo-item"><a>pending thing #1</a></li>
+                    <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
+                    <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
                 </ul>
-                <button id="todo-list-add">Add</button>
+                <button id="todo-list-add" onclick="alert('This will be a pop-up form for adding new items, need to implement with JS.')">Add</button>
             </div>
             <div class="page-section">
-                <header>Chat</header>
+                <h3>Chat</h3>
+                <div class="chat-msg">
+                    You: Do you think we can allocate more time on our reservation?
+                </div>
+                <div class="chat-msg">
+                    Fairbanks: Sure, add it to the to do list, so I can remember to do that.
+                </div>
+                <div class="chat-msg">
+                    You: Okay, thanks.
+                </div>
                 <!-- Dynamically updated later with JS !-->
             </div>
         </div>
