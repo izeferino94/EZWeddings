@@ -1,6 +1,81 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Client</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link rel="stylesheet" href="client.css">
     </head>
-    <body>Selected Client</body>
+    <body>
+        <ul id="nav-bar">
+            <li class="nav-item"><a href="business_account.html">Home</a></li>
+            <li class="nav-item"><a href="business_settings.html">Settings</a></li>
+            <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
+        </ul>
+        
+        <div class="title">
+          <img id="title-img" src="img/title_bg4.jpeg" alt="wedding">
+          <div class="title-centered"><h1>Rosa Melano</h1></div>
+        </div>
+        
+        <div style="text-align: center;">
+            <div class="page-section">
+                <h3>Contact Information</h3>
+                <img id="client-picture" src=img/client2.jpeg alt="Client"><br>
+                <p id="contact-info">
+                    <b>Phone-Number:</b> <i>888-888-8888</i><br>
+                    <b>E-mail:</b> <i>rosa_melano@gmail.com</i><br>
+                </p>
+            </div>
+            <div class="page-section">
+                <h3>To Do List</h3>
+                <div id="list-container">
+                    <ul id="todo-list">
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                    </ul>
+                </div>
+                <button id="todo-list-add" onclick="alert('This will be a pop-up form for adding new items, need to implement with JS.')">Add</button>
+            </div>
+            <div class="page-section">
+                <h3>Chat</h3>
+                <div id="chat-box">
+                    <div class="chat-msg">
+                        Rosa Melano:<br/> Do you think we can allocate more time on our reservation?
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Sure, add it to the to do list, so I can remember to do that.
+                    </div>
+                    <div class="chat-msg">
+                        Rosa Melano:<br/> Okay, thanks.
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                    <div class="chat-msg">
+                        You:<br/> Testing scroll....
+                    </div>
+                </div>
+                <!-- Dynamically updated later with JS !-->
+                <input id="msg-input" type="text" name="msg" placeholder="Type message...">
+            </div>
+        </div>
+        
+    </body>
 </html>
