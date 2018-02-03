@@ -1,25 +1,125 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Login</title>
+		<style>
+		       	 
+
+		   #ldiv{
+		       width: 350px;
+			   height: 285px;
+			   background-color: #FFFFFD;
+			   border-radius: 2px; 
+               opacity: 0.9;
+			   
+			   text-align: center;			   		   
+			   position: absolute;
+			   top:0; 
+			   bottom: 0;
+			   left: 0;
+			   right: 0;
+			   margin: auto;		
+	   
+		   }
+		
+			input[type=email]{
+			    width: 95%;
+				padding: 10px 12px 10px 12px;				
+				background: #f2f2f2;
+                border: 2px;
+				border-radius: 4px; 
+				font-size: 14px;
+			}
+			
+			input[type=password]{
+			    width: 95%;
+				padding: 5px 12px 10px 12px;				
+				background: #f2f2f2;
+                border: 2px;
+				border-radius: 4px; 
+				font-size: 14px;
+			}
+			
+			/*
+			input[type=button]{
+			    width: 40%;
+				padding: 8px 12px 8px 12px;	
+                text-align: center;		
+                font-size: 16px;				
+				background: #008CBA;
+                border: 2px;
+				border-radius: 4px; 
+			}
+			*/
+			
+			input[type=submit]{
+			    width: 80%;
+				padding: 8px 12px 8px 12px;	
+                text-align: center;		
+                font-size: 16px;				
+				background: #008CBA;
+                border: 2px;
+				border-radius: 4px; 
+				text-decoration: none;
+                display: inline-block;
+				color: white;
+			}
+			
+			a{
+                font-size: 12px;
+                color: #404040;
+                text-decoration: none;
+				
+                float: right;	
+				padding-left: 20px;
+				padding-right: 12px;
+			}
+			
+			#register{
+			    float: left;			
+			}
+			
+			form{
+			    
+				padding-left: 15px;
+				padding-right: 15px;			
+			}
+		
+		    h1{
+			    font-family: 'Libre Franklin', sans-serif;
+				padding-bottom: 0px;
+				margin-bottom: 10px;
+				margin-top: 19px;
+
+			}
+			
+			body{
+			    background-image: url("./img/blurflower.jpg");
+				background-repeat: no-repeat;
+                background-size: 100% auto;				
+	        }
+			   
+		</style>
     </head>
     <body>
-    
-        <form>
-	    <br>
-	    Email:  
-            <input type="email" name="email">
-	    <br>
-
-	    <br>
-	    Password:
-	    <input type="password" name="password">
-	    <br>
-	    
-	    <br>
-	    <input type="button" onclick="location.href='register.html';" value="Register">
-	    <input type="submit" name="submit" value="Submit">
-	</form>
-
-	<a href="password_recovery.html">Forgot Username/Password</a>
+        <div id="ldiv">
+            <h1>EZWeddings</h1>		
+	    	<form>
+	            <br> 
+                <input type="email" name="email" placeholder="email" required>
+	            <br>
+                
+	            <br>
+	            <input type="password" name="password" placeholder="password" required>
+	            <br>
+	            
+	            <br>
+	            <!--<input type="button" onclick="location.href='register.html';" value="Register">-->
+	            <input type="submit" name="submit" value="Log In">
+	        </form>
+			<br>
+			<a href="password_recovery.html">Forgot Password?</a>
+			<a id="register" href="password_recovery.html">Register</a>
+        </div>	
     </body>
 </html>
