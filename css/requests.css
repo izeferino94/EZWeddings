@@ -11,7 +11,7 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
     margin: auto;
 }
-#client-picture {
+.client-picture {
     max-width: 100%;
     height: auto;
 }
@@ -74,7 +74,8 @@ td {
     overflow-y: scroll;
 }
 
-.accept-deny-button {
+
+.deny-button {
     position: absolute;
     bottom: 0;
     background-color: #333;
@@ -90,17 +91,34 @@ td {
     transition-duration: 0.4s;
     cursor: pointer;
     width: 110px;
+    right: 120px;
 }
 
-.accept-deny-button:hover {
+.deny-button:hover {
     background-color: #0054B2;
     color: white;
 }
 
-#deny-button {
-    right: 120px;
+.accept-button {
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 110px;
+    right: 0;
 }
 
-#accept-button {
-    right: 0;
+.accept-button:hover {
+    background-color: #0054B2;
+    color: white;
 }
