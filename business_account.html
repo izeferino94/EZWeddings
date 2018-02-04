@@ -1,12 +1,43 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>My Account</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/business_account.css">
     </head>
     <body>
-        <h1>My Account: Business</h1>
-        <a href="business_settings.html">My Settings</a><br>
-        <a href="clients_list.html">My Clients</a><br>
-        <a href="requests.html">Requests</a><br>
-        <a href="update_listing.html">Update Listing</a>
+        <ul id="nav-bar">
+            <li class="nav-item"><a href="planner_account.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+            <li class="nav-item"><a href="planner_account.html">Home</a></li>
+            <li class="nav-item"><a href="planner_settings.html">Settings</a></li>
+            <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
+        </ul>
+        
+        <div class="title">
+          <img id="title-img" src="img/title_bg5.jpeg" alt="collaboration">
+          <div class="title-centered"><h1>My Account</h1></div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="clients_list.html">
+                <div class="card">
+                        <h2 class="link">My Clients</h2>
+                </div>
+            </a>
+            <a href="requests.html">
+                <div class="card">
+                        <h2 class="link">Requests</h2>
+                </div>
+            </a>
+            <a href="update_listing.html">
+                <div class="card">
+                    <h2 class="link">Update Listing</h2>
+                </div>
+            </a>
+        </div>
+        
     </body>
 </html>

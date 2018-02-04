@@ -41,8 +41,8 @@
                 padding: 5px 5px 1px 4px;   
                 width: 555px;                
             }
-
-            #firstnameid,#lastnameid{
+            
+            input[type=text]{
                 width: 270px;                
             }
             
@@ -62,7 +62,7 @@
             
             input[type=submit]:hover{
                 background: #1C7ABA;
-            }
+            }            
             
             #lastnameid{
                 margin-left: 12px;
@@ -79,11 +79,11 @@
             
             #nameid{
                 overflow: hidden;
-            }            
-        </style>            
+            }
+        </style>
     </head>
-        <body>
-            <ul id="nav-bar">
+    <body>
+        <ul id="nav-bar">
             <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
             <li class="nav-item"><a href="business_settings.html">Settings</a></li>
@@ -92,107 +92,49 @@
         
         <div class="title">
           <img id="title-img" src="img/cogs.jpeg" alt="wedding">
-          <div class="title-centered"><h1>Vendor Settings</h1></div>
+          <div class="title-centered"><h1>Planner Settings</h1></div>
         </div>
     
         <div id="pageblock">
-            <div id="scontent"> 
-                <br>         
+            <div id="scontent"> <br>
                 <form>
                    <div id="nameid">
                        <p id="p1">First Name</p>
                        <p id="p2">Last Name</p>
                        <br>
-                       <input id="firstnameid" type="text" name="firstname" value="Shack">          
+                       <input type="text" name="firstname" value="John">          
                 
-                       <input id="lastnameid" type="text" name="lastname" value="ElOniel">
+                       <input id="lastnameid" type="text" name="lastname" value="Smith">
                        <br>
                    </div>
                    
-                    <br>
-                    Company Name:<br>
-                    <input id="cnameid" type="text" name="name" value="Cube Table">          
-	                <br>
-                
-                    <br>Photo:<br>
-                    <img src="./img/placeholder.png" width="255" height="200">
-                    <br>
-                    <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
-                    <br>
-	            
-	                <br>
-                    Description<br>
-                    <input type="text" name="description" value="make some square pies for customers under the sky">          
-	                <br>
-                
-	                <br>
-    	            Email:<br>
-                    <input type="email" name="email" value="squarefoods@gmail.com">
-	                <br>
-                
-	                <br>
-    	            Phone number:<br>
-                    <input type="tel" name="pnumber" value="818-143-5323">
-	                <br>
-                
-	                <br>
-    	            Address:<br>
-                    <input type="text" name="address" value="123 balcony ave, La Jolla, CA">
-	               <br>
-                
-	            
-	                <!--
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Music">
-	                Music
-	                <br>
-                    -->
-                
-	                <br>
-                    Categories:  
-                    <br><br> 	   
-                    <input type="checkbox" name="vendortype" value="Music">
-	                Music
-	                <br>
+                   <br>Photo:<br>
+                   <img src="./img/diagonal.jpg" width="255" height="200">
+                   <br>
+                   <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                   <br>
+                   
+                   <br>
+                   Email:<br>
+                   <input type="email" name="email" value="jSmity@aol.com">
+                   <br>
+                   
+                   <br>
+                   Password:<br>
+                   <input type="password" name="password" value="********">
+                   <br>
+                   
+                   <br>
+                   Phone number:<br>
+                   <input type="tel" name="pnumber" value="818-782-8319">
+                   <br>   
                     
-	                <br>
-                    <input type="checkbox" name="vendortype" value="Decorations">
-	                Decorations
-                    <br>
-
-	                <br>
-                    <input type="checkbox" name="vendortype" value="Food" checked>
-	                Food
-                    <br>                    
-           
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Music">
-	                Music
-	                <br>
-                
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Entertainment">
-	                Entertainment
-	                <br>
-                
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Officiant">
-	                Officiant
-	                <br>
-                
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Security">
-	                Security
-	                <br>
-                
-	                <br>    	   
-                    <input type="checkbox" name="vendortype" value="Florist">
-	                Florist
-	                <br>
-                
-	                <br>
-	                <input type="submit" name="submit" value="Save Changes">         
-                </form>  
+                   <br>
+                   Account Type: Vendor
+                   <br>
+                   <br>
+                   <input type="submit" name="submit" value="Save Changes"> 
+                </form>
             </div>
         </div>
     </body>
