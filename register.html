@@ -46,12 +46,12 @@
             input[type=text],input[type=email],
             input[type=password],input[type=tel]{
                 font-size: 18px;
-                padding: 4px 5px 4px 4px;   
+                padding: 5px 5px 1px 4px;   
                 width: 290px;
                 border:none;
                 border-bottom: 2px solid #ccc;                
-                margin-bottom: 8px; 
-                color: #888888; 
+                margin-bottom: 8px;   
+                margin-top: 8px;                
             }
             
             input[type=text]{ 
@@ -87,7 +87,11 @@
             
             input[type=submit]:hover{
                 background: #1C7ABA;
-            }            
+            }  
+            
+            ::placeholder{
+                color: #888888;
+            }               
         </style>
     </head>
     <body>
@@ -98,9 +102,9 @@
                 <form>
                     <div id="nameid">
                         Name:<br>
-                        <input type="text" name="firstname" value="first">          
+                        <input type="text" name="firstname" placeholder="first">          
                         
-                        <input id="lastnameid" type="text" name="lastname" value="last">
+                        <input id="lastnameid" type="text" name="lastname" placeholder="last">
                         <br>
                     </div>
                     

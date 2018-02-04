@@ -1,84 +1,199 @@
 <html>
     <head>
         <title>Vendor Settings</title>
-    </head>
-        <form>
-            Name:<br>
-            <input type="text" name="name">          
-	    <br>
-
-	    <br>
-    	    Photo:<br>
-            <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
-	    <br>
-	    
-	    <br>
-            Description<br>
-            <input type="text" name="description">          
-	    <br>
-
-	    <br>
-    	    Email:<br>
-            <input type="email" name="email">
-	    <br>
-
-	    <br>
-    	    Phone number:<br>
-            <input type="tel" name="pnumber">
-	    <br>
-
-	    <br>
-    	    Address:<br>
-            <input type="text" name="address">
-	    <br>
-
-	    
-	    <!--
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Music">
-	    Music
-	    <br>
-            -->
-
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Music">
-	    Music
-	    <br>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="client.css">
+        
+        <style>
+            *{
+                padding:0;
+                margin:0;        
+                font-family: 'Libre Franklin', sans-serif;             
+            }
             
-	    <br>
-            <input type="checkbox" name="vendortype" value="Decorations">
-	    Decorations
-            <br>
+            body{
+                background-color: #F1F1F1;
+            }
+            
+            #pageblock{
+                background-color: white;
 
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Music">
-	    Music
-	    <br>
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;  
 
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Entertainment">
-	    Entertainment
-	    <br>
+                font-weight: 600;
+                font-size: 18px;                 
+            }
+            
+            #scontent{
+                margin-left: 25px;
+            }
+            
+            input[type=text],input[type=email],
+            input[type=password],input[type=tel]{
+                font-size: 18px;                
+                margin-bottom: 0px;   
+                margin-top: 6px;   
+                padding: 5px 5px 1px 4px;   
+                width: 555px;                
+            }
 
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Officiant">
-	    Officiant
-	    <br>
+            #firstnameid,#lastnameid{
+                width: 270px;                
+            }
+            
+            input[type=submit]{                
+                padding: 8px 12px 8px 12px;    
+                text-align: center;        
+                font-size: 16px;    
+                font-weight: 600;                
+                background: #008CBA;
+                border: 2px;
+                border-radius: 4px; 
+                text-decoration: none;
+                display: inline-block;
+                color: white;                
+                margin-bottom: 10px;
+            }       
+            
+            input[type=submit]:hover{
+                background: #1C7ABA;
+            }
+            
+            #lastnameid{
+                margin-left: 12px;
+            }
+            
+            #p1{
+                float: left;
+            }           
+            
+            #p2{
+                float:right;
+                margin-right: 195px;
+            } 
+            
+            #nameid{
+                overflow: hidden;
+            }            
+        </style>            
+    </head>
+        <body>
+            <ul id="nav-bar">
+            <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+            <li class="nav-item"><a href="business_account.html">Home</a></li>
+            <li class="nav-item"><a href="business_settings.html">Settings</a></li>
+            <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
+        </ul>
+        
+        <div class="title">
+          <img id="title-img" src="img/cogs.jpeg" alt="wedding">
+          <div class="title-centered"><h1>Vendor Settings</h1></div>
+        </div>
+    
+        <div id="pageblock">
+            <div id="scontent"> 
+                <br>         
+                <form>
+                   <div id="nameid">
+                       <p id="p1">First Name</p>
+                       <p id="p2">Last Name</p>
+                       <br>
+                       <input id="firstnameid" type="text" name="firstname" value="Shack">          
+                
+                       <input id="lastnameid" type="text" name="lastname" value="ElOniel">
+                       <br>
+                   </div>
+                   
+                    <br>
+                    Company Name:<br>
+                    <input id="cnameid" type="text" name="name" value="Cube Table">          
+	                <br>
+                
+                    <br>Photo:<br>
+                    <img src="./img/placeholder.png" width="255" height="200">
+                    <br>
+                    <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                    <br>
+	            
+	                <br>
+                    Description<br>
+                    <input type="text" name="description" value="make some square pies for customers under the sky">          
+	                <br>
+                
+	                <br>
+    	            Email:<br>
+                    <input type="email" name="email" value="squarefoods@gmail.com">
+	                <br>
+                
+	                <br>
+    	            Phone number:<br>
+                    <input type="tel" name="pnumber" value="818-143-5323">
+	                <br>
+                
+	                <br>
+    	            Address:<br>
+                    <input type="text" name="address" value="123 balcony ave, La Jolla, CA">
+	               <br>
+                
+	            
+	                <!--
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Music">
+	                Music
+	                <br>
+                    -->
+                
+	                <br>
+                    Categories:  
+                    <br><br> 	   
+                    <input type="checkbox" name="vendortype" value="Music">
+	                Music
+	                <br>
+                    
+	                <br>
+                    <input type="checkbox" name="vendortype" value="Decorations">
+	                Decorations
+                    <br>
 
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Security">
-	    Security
-	    <br>
-
-	    <br>    	   
-            <input type="checkbox" name="vendortype" value="Florist">
-	    Florist
-	    <br>
-
-	    <br>
-	    <br>
-	    <input type="submit" name="submit" value="Save">           
- 
-        </form>
-
+	                <br>
+                    <input type="checkbox" name="vendortype" value="Food" checked>
+	                Food
+                    <br>                    
+           
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Music">
+	                Music
+	                <br>
+                
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Entertainment">
+	                Entertainment
+	                <br>
+                
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Officiant">
+	                Officiant
+	                <br>
+                
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Security">
+	                Security
+	                <br>
+                
+	                <br>    	   
+                    <input type="checkbox" name="vendortype" value="Florist">
+	                Florist
+	                <br>
+                
+	                <br>
+	                <input type="submit" name="submit" value="Save Changes">         
+                </form>  
+            </div>
+        </div>
+    </body>
 </html>
