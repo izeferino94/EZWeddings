@@ -1,6 +1,141 @@
 <html>
     <head>
         <title>My Settings</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="client.css">
+        
+        <style>
+            *{
+                padding:0;
+                margin:0;        
+                font-family: 'Libre Franklin', sans-serif;             
+            }
+            
+            body{
+                background-color: #F1F1F1;
+            }
+            
+            #pageblock{
+                background-color: white;
+
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;  
+
+                font-weight: 600;
+                font-size: 18px;                 
+            }
+            
+            #scontent{
+                margin-left: 25px;
+            }
+            
+            input[type=text],input[type=email],
+            input[type=password],input[type=tel]{
+                font-size: 18px;                
+                margin-bottom: 0px;   
+                margin-top: 6px;   
+                padding: 5px 5px 1px 4px;   
+                width: 555px;                
+            }
+            
+            input[type=text]{
+                width: 270px;                
+            }
+            
+            input[type=submit]{                
+                padding: 8px 12px 8px 12px;    
+                text-align: center;        
+                font-size: 16px;    
+                font-weight: 600;                
+                background: #008CBA;
+                border: 2px;
+                border-radius: 4px; 
+                text-decoration: none;
+                display: inline-block;
+                color: white;                
+                margin-bottom: 10px;
+            }       
+            
+            input[type=submit]:hover{
+                background: #1C7ABA;
+            }            
+            
+            #lastnameid{
+                margin-left: 12px;
+            }
+            
+            #p1{
+                float: left;
+            }           
+            
+            #p2{
+                float:right;
+                margin-right: 195px;
+            } 
+            
+            #nameid{
+                overflow: hidden;
+            }
+        </style>
     </head>
-    <body>Wedding Planner Settings</body>
+    <body>
+        <ul id="nav-bar">
+            <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+            <li class="nav-item"><a href="business_account.html">Home</a></li>
+            <li class="nav-item"><a href="business_settings.html">Settings</a></li>
+            <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
+        </ul>
+        
+        <div class="title">
+          <img id="title-img" src="img/cogs.jpeg" alt="wedding">
+          <div class="title-centered"><h1>Planner Settings</h1></div>
+        </div>
+    
+        <div id="pageblock">
+            <div id="scontent"> <br>
+                <form>
+                   <div id="nameid">
+                       <p id="p1">First Name</p>
+                       <p id="p2">Last Name</p>
+                       <br>
+                       <input type="text" name="firstname" value="Shack">          
+                
+                       <input id="lastnameid" type="text" name="lastname" value="ElOniel">
+                       <br>
+                   </div>
+                   
+                   <br>Photo:<br>
+                   <img src="./img/placeholder.png" width="255" height="200">
+                   <br>
+                   <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                   <br>
+                   
+                   <br>
+                   Email:<br>
+                   <input type="email" name="email" value="jSmity@aol.com">
+                   <br>
+                   
+                   <br>
+                   Password:<br>
+                   <input type="password" name="password" value="********">
+                   <br>
+                   
+                   <br>
+                   Phone number:<br>
+                   <input type="tel" name="pnumber" value="818-782-8319">
+                   <br>   
+                    
+                   <br>
+                   Account Type: Client
+                   <br>
+                   <br>
+                   <input type="submit" name="submit" value="Save Changes"> 
+                </form>
+            </div>
+        </div>
+    </body>
 </html>
