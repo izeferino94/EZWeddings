@@ -1,13 +1,69 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>My Account</title>
+        <title>Planner</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link rel="stylesheet" href="business.css">
     </head>
     <body>
-        <h1>My Account: Wedding Planner</h1>
-        <a href="planner_settings.html">My Settings</a><br>
-        Example Category from plan:<br>
-        <a href="business_search.html">Search Businesses</a>
-        <a href="businesses_list.html">Selected Businesses</a>
+        <ul id="nav-bar">
+            <li class="nav-item"><a href="planner_account.html">Home</a></li>
+            <li class="nav-item"><a href="planner_settings.html">Settings</a></li>
+            <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
+        </ul>
+        
+        <div class="title">
+          <img id="title-img" src="img/title_bg.jpeg" alt="beach">
+          <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
+        </div>
+        <div style="text-align:  center;">
+            
+            <div class="page-section3">
+                <h3>Need Assistance</h3>
+                <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
+                <p id="contact-info">
+                    <b>Phone-Number:</b> <i>858-356-2135</i><br>
+                    <b>E-mail:</b> <i>info.frcc@bayclubs.com</i><br>
+                    <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
+                </p>
+            </div>
+            
+            <div class="page-section2">
+                <h2 >Planner</h2>
+                <div id="list-container">
+                    <ul id="todo-list">
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+         <div class="page-section4">
+                <h2 >Business Hired</h2>
+                <div id="list-container">
+                    <ul id="todo-list">
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
+                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                        <li class="todo-item"><a>Testing scroll...</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
         
     </body>
 </html>
