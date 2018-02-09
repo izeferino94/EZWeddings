@@ -1,83 +1,120 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Search</title>
+        <title>Search for Business</title>
         <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="css/business_search.css">
-
+        <link rel="stylesheet" href="client.css">
+		<link rel="stylesheet" href="css/requests.css">
+        
+        <style>
+            *{
+                padding:0;
+                margin:0;        
+                font-family: 'Libre Franklin', sans-serif;             
+            }
+			
+			table{
+			    margin-left: 20px;
+			}
+			
+			input[type=text]{
+                width: 270px;  
+                display: block;
+                vertical-align: top;
+                width: 60%;
+                position: relative;
+                margin: auto;		
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 20px;
+                background-color: white;
+                background-image: url('img/search.png');
+                background-position: 10px 10px; 
+				background-size: 30px 30px;
+                background-repeat: no-repeat;
+                padding: 12px 20px 10px 45px;				
+            }
+        </style>
     </head>
     <body>
-        <ul id="nav-bar">
-            <li class="nav-item"><a href="planner_account.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+		<ul id="nav-bar">
+            <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
             <li class="nav-item"><a href="business_settings.html">Settings</a></li>
             <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
         </ul>
         
         <div class="title">
-          <img id="title-img" src="img/title_bg4.jpeg" alt="couple">
-          <div class="title-centered"><h1>Search: Veneus</h1></div>
+          <img id="title-img" src="img/cogs.jpeg" alt="wedding">
+          <div class="title-centered"><h1>Vendor Search</h1></div>
         </div>
-        
-            <div class="business">
-                <h3>Fairbanks Ranch Country Club</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="business-picture" src=img/wedding_venue_1.jpg alt="business"><br>
-                                Phone-Number: 858-356-2135<br>
-                                E-mail: info.frcc@bayclubs.com<br>
-                                Address: 15150 San Dieguito Road, Rancho Santa Fe, CA 92067
-                            </td>
-                            <td>
-                                <div class="business-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. 
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="see-more-button" onclick="location.href='business_listing.html';">See More...</button>
-            </div>
-            <div class="business">
-                <h3>Fairbanks Ranch Country Club</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="business-picture" src=img/wedding_venue_1.jpg alt="business"><br>
-                                Phone-Number: 858-356-2135<br>
-                                E-mail: info.frcc@bayclubs.com<br>
-                                Address: 15150 San Dieguito Road, Rancho Santa Fe, CA 92067
-                            </td>
-                            <td>
-                                <div class="business-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. 
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="see-more-button" onclick="location.href='business_listing.html';">See More...</button>
-            </div>
-            <div class="business">
-                <h3>Fairbanks Ranch Country Club</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="business-picture" src=img/wedding_venue_1.jpg alt="business"><br>
-                                Phone-Number: 858-356-2135<br>
-                                E-mail: info.frcc@bayclubs.com<br>
-                                Address: 15150 San Dieguito Road, Rancho Santa Fe, CA 92067
-                            </td>
-                            <td>
-                                <div class="business-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. 
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="see-more-button" onclick="location.href='business_listing.html';">See More...</button>
-            </div>
+		
+		<br>
+		<input type="text" placeholder="Search.." value="food Catering">
+		<br>
+
+        <div class="client">
+            <h3>Tacos El Gordo</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/TACOS.png" alt="Person" height="270" ><br><br>
+                            Phone-Number: 858-356-2135<br>
+                            E-mail: tacosMucho@gmail.com
+                        </td>
+                        <td>
+                            <div class="request-text" style="border:1px solid black;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
+        </div>		
+		
+		
+        <div class="client">
+            <h3>Mikes Persian Catering</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/persian.jpg" alt="Person" height="270" ><br><br>
+                            Phone-Number: 858-356-2135<br>
+                            E-mail: @gmail.com
+                        </td>
+                        <td>
+                            <div class="request-text" style="border:1px solid black;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
+        </div>			
+ 
+        <div class="client">
+            <h3>Panda Express</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/panda.jpg" alt="Person" height="270" ><br><br>
+                            Phone-Number: 858-356-2135<br>
+                            E-mail: pandafoods@gmail.com
+                        </td>
+                        <td>
+                            <div class="request-text" style="border:1px solid black;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
+        </div>	
+		
+	    <!--Search for a business to provide the selected service.<br>
+        <a href="business_listing.html">Example Business #1</a>-->
     </body>
 </html>
