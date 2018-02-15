@@ -6,9 +6,9 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="business.css">
+        <link rel="stylesheet" href="css/business.css">
     </head>
-    <body>
+    <body onload="loadInfo()">
         <ul id="nav-bar">
             <li class="nav-item"><a href="businesses_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="planner_account.html">Home</a></li>
@@ -17,69 +17,71 @@
         </ul>
         
         <div class="title">
-          <img id="title-img" src="img/title_bg.jpeg" alt="beach">
-          <div class="title-centered"><h1>Fairbanks Ranch Country Club</h1></div>
+          <img id="title-img" src="#" alt="business type">
+          <div class="title-centered"><h1></h1></div>
         </div>
         
         <div style="text-align: center;">
             <div class="page-section">
                 <h3>Contact Information</h3>
-                <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
+                <img id="business-picture" src=# alt="business picture"><br>
                 <p id="contact-info">
-                    <b>Phone-Number:</b> <i>858-356-2135</i><br>
-                    <b>E-mail:</b> <i>info.frcc@bayclubs.com</i><br>
-                    <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
                 </p>
             </div>
             <div class="page-section">
                 <h3>To Do List</h3>
                 <div id="list-container">
                     <ul id="todo-list">
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
                     </ul>
                 </div>
-                <button id="todo-list-add" onclick="alert('This will be a pop-up form for adding new items, need to implement with JS.')">Add</button>
+                <button id="todo-list-add" onclick="showModal()">Add</button>
             </div>
             <div class="page-section">
                 <h3>Chat</h3>
                 <div id="chat-box">
-                    <div class="chat-msg">
-                        You:<br/> Do you think we can allocate more time on our reservation?
-                    </div>
-                    <div class="chat-msg">
-                        Fairbanks:<br/> Sure, add it to the to do list, so I can remember to do that.
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Okay, thanks.
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Testing scroll....
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Testing scroll....
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Testing scroll....
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Testing scroll....
-                    </div>
-                    <div class="chat-msg">
-                        You:<br/> Testing scroll....
-                    </div>
                 </div>
-                <!-- Dynamically updated later with JS !-->
-                <input id="msg-input" type="text" name="msg" placeholder="Type message...">
+                <input id="msg-input" type="text" name="msg" placeholder="Type message..." onkeyup="sendMessage(event)"/>
             </div>
+            
+            <!-- Add new todo modal -->
+            <div id="add-item-modal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Add To Do Item</h2>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <input id="add-modal-text" class="modal-input" placeholder="To do" type="text" required />
+                    <input class="modal-submit" type="button" value="Add Item" onclick="addTodoItem()"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Edit todo modal -->
+            <div id="edit-item-modal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Edit To Do Item</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="modal-form">
+                    <input id="edit-modal-text" class="modal-input" placeholder="To do" type="text" required />
+                    <input class="edit-button" type="button" value="Delete" onclick="deleteTodoItem()"/>
+                    <input class="edit-button" type="button" value="Update" onclick="editTodoItem()"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            
+            
         </div>
+        <script src="js/business.js"></script>
         
     </body>
 </html>
