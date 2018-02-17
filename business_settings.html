@@ -18,7 +18,7 @@
                 background-color: #F1F1F1;
             }
             
-            #pageblock{
+            #pageblockidBS{
                 background-color: white;
 
                 width: 600px;
@@ -29,7 +29,7 @@
                 font-size: 18px;                 
             }
             
-            #scontent{
+            #scontentidBS{
                 margin-left: 25px;
             }
             
@@ -64,25 +64,51 @@
                 background: #1C7ABA;
             }            
             
-            #lastnameid{
+            #lnameidBS{
                 margin-left: 12px;
             }
             
-            #p1{
+            #p1idBS{
                 float: left;
             }           
             
-            #p2{
+            #p2idBS{
                 float:right;
                 margin-right: 195px;
             } 
             
-            #nameid{
+            #nameidBS{
                 overflow: hidden;
             }
         </style>
+        <script>
+            var user = {}; 
+            user["fname"] = "Jack";
+            user["lname"] = "Kangaroo";         
+            user["email"] = "Jkang@aol.com";
+            user["password"] = "********";
+            user["phone"] = "818-432-5212";  
+        
+            function populate(){              
+                document.getElementById("fnameidBS").value = user["fname"];
+                document.getElementById("lnameidBS").value = user["lname"] ;         
+                document.getElementById("emailidBS").value = user["email"];
+                document.getElementById("pwordidBS").value = user["password"];
+                document.getElementById("phoneidBS").value = user["phone"];           
+            }
+            
+            function saveChanges(){                
+                user["fname"] = document.getElementById("fnameidBS").value;
+                user["lname"] = document.getElementById("lnameidBS").value;      
+                user["email"] = document.getElementById("emailidBS").value;
+                user["password"] = document.getElementById("pwordidBS").value;
+                user["phone"] = document.getElementById("phoneidBS").value;
+                
+                return false;
+            }    
+        </script>      
     </head>
-    <body>
+    <body onload="populate()">
         <ul id="nav-bar">
             <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
@@ -95,38 +121,38 @@
           <div class="title-centered"><h1>Planner Settings</h1></div>
         </div>
     
-        <div id="pageblock">
-            <div id="scontent"> <br>
-                <form>
-                   <div id="nameid">
-                       <p id="p1">First Name</p>
-                       <p id="p2">Last Name</p>
+        <div id="pageblockidBS">
+            <div id="scontentidBS"> <br>
+                <form onsubmit="return saveChanges()" method="post">
+                   <div id="nameidBS">
+                       <p id="p1idBS">First Name</p>
+                       <p id="p2idBS">Last Name</p>
                        <br>
-                       <input type="text" name="firstname" value="John">          
+                       <input id="fnameidBS" type="text" name="firstname">          
                 
-                       <input id="lastnameid" type="text" name="lastname" value="Smith">
+                       <input id="lnameidBS" type="text" name="lastname">
                        <br>
                    </div>
                    
                    <br>Photo:<br>
                    <img src="./img/diagonal.jpg" width="255" height="200">
                    <br>
-                   <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                   <input id ="photoidBS" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
                    <br>
                    
                    <br>
                    Email:<br>
-                   <input type="email" name="email" value="jSmity@aol.com">
+                   <input id="emailidBS" type="email" name="email">
                    <br>
                    
                    <br>
                    Password:<br>
-                   <input type="password" name="password" value="********">
+                   <input id="pwordidBS" type="password" name="password">
                    <br>
                    
                    <br>
                    Phone number:<br>
-                   <input type="tel" name="pnumber" value="818-782-8319">
+                   <input id="phoneidBS" type="tel" name="pnumber">
                    <br>   
                     
                    <br>

@@ -37,5 +37,5 @@ function generate_business(id, type, name, img_src) {
 
 function setBusiness(id) {
     localStorage.setItem("view_business", id);
-    window.location.href = "/business.html";
+    window.location.href = "business.html";
 }

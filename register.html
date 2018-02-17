@@ -2,134 +2,49 @@
 <html>
     <head>
         <title>Registration</title>
-        <style>           
-            *{
-                padding: 0;
-                margin: 0;        
-                font-family: 'Libre Franklin', sans-serif;             
-            }
-            
-            body{
-                background-image: url("./img/rose.jpeg");
-                background-repeat: no-repeat;
-                background-size: cover;    
-                background-position: center center;
-               
-            }
-            
-            h3{
-                color: #464646;
-                font-size: 28px;
-                margin-bottom: 18px;
-            }
-            
-            #pagediv{
-                display: none;
-                background-color: white;                               
-                display: inline-block;
-                height:100%;      
-                font-weight: 600;
-                font-size: 23px;
-            }
-            
-            #contentdiv{
-                margin-top: 15px;
-                margin-left: 20px;
-                margin-right: 15px;
-                display: inline-block;
-            }
-            
-            input[type=text],input[type=email],
-            input[type=password],input[type=tel]{
-                font-size: 18px;
-                padding: 5px 5px 1px 4px;   
-                width: 290px;
-                border:none;
-                border-bottom: 2px solid #ccc;                
-                margin-bottom: 8px;   
-                margin-top: 8px;                
-            }
-            
-            input[type=text]{ 
-                margin-top: 8px; 
-                margin-bottom: 4px;                
-                width: 130px;
-            }
-            
-            #lastnameid{
-                margin-left: 10px;
-            }
-            
-            input[type=radio]{
-                margin-left: 30px;
-            }
-            
-            input[type=submit]{                
-                padding: 8px 12px 8px 12px;    
-                text-align: center;        
-                font-size: 16px;    
-                font-weight: 600;                
-                background: #008CBA;
-                border: 2px;
-                border-radius: 4px; 
-                text-decoration: none;
-                display: inline-block;
-                color: white;
-                
-                margin-top: 5px;
-                margin-left: 85px;
-                margin-bottom: 10px;
-            }       
-            
-            input[type=submit]:hover{
-                background: #1C7ABA;
-            }  
-            
-            ::placeholder{
-                color: #888888;
-            }               
-        </style>
+        <link rel="stylesheet" href="./css/register.css">
+        <script type="text/javascript" src="./js/register.js"></script> 
     </head>
     <body>
-        <div id="pagediv">
-            <div id="contentdiv">                
+        <div id="pagedivR">
+            <div id="contentdivR">                
                 <h3>Register an Account</h3>
                 
-                <form>
+                <form onsubmit="return createAccount()" method="post" action="planner_account.html">
                     <div id="nameid">
                         Name:<br>
-                        <input type="text" name="firstname" placeholder="first">          
+                        <input id="fnameidR" type="text" name="firstname" placeholder="first">          
                         
-                        <input id="lastnameid" type="text" name="lastname" placeholder="last">
+                        <input id="lnameidR" type="text" name="lastname" placeholder="last">
                         <br>
                     </div>
                     
                     <br>Photo:<br>
                     <img src="./img/diagonal.jpg" width="255" height="200" alt="tacos.jpeg">
                     <br>
-                    <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                    <input id="photoidR" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
                     <br>
                     
                     <br>
                     Email:<br>
-                    <input type="email" name="email">
+                    <input id="emailidR" type="email" name="email">
                     <br>
                     
                     <br>
                     Password:<br>
-                    <input type="password" name="password">
+                    <input id="passwordidR" type="password" name="password">
                     <br>
                     
                     <br>
                     Phone number:<br>
-                    <input type="tel" name="pnumber">
+                    <input id="phoneidR" type="tel" name="pnumber">
                     <br>
                     
                     <br>           
-                    <input type="radio" name="clientvendor" value="client" checked>
+                    <input id="cradioidR" type="radio" name="clientvendor" value="client" checked>
                     Client
                     
-                    <input id="vradioid" type="radio" name="clientvendor" value="vendor">
+                    <input id="vradioidR" type="radio" name="clientvendor" value="vendor">
                     Vendor
                     <br>
                     
