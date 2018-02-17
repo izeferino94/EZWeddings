@@ -14,6 +14,5 @@ function createAccount()
         newAccount["type"] = "vendor";
     }               
     //localStorage.setItem('newAccount', JSON.stringify(newAccount));
-    alert("a");
     return true;
 }

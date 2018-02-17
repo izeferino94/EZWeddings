@@ -39,9 +39,9 @@
             }
         </style>
     </head>
-    <body>
+    <body >
 		<ul id="nav-bar">
-            <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+            <li class="nav-item"><a href="planner_account.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
             <li class="nav-item"><a href="business_settings.html">Settings</a></li>
             <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
@@ -53,68 +53,73 @@
         </div>
 		
 		<br>
-		<input type="text" placeholder="Search.." value="food Catering">
-		<br>
+		<input id="searchidBS" type="text" placeholder="Search...">
+        <br>
+        <div id="sresultidBS"></div>
+        <script>
+            //listen for enter key press 
+            document.getElementById("searchidBS").onkeypress = function(event){
+                if (event.keyCode == 13 || event.which == 13){
+                    getData()
+                } 
+            };
+        
+            function getData()
+            {  
+                var req_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia,  lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.";
+                
+                //remove existing search results
+                document.getElementById("sresultidBS").innerHTML =""; 
+                
+                //dynamically create new divs and display search results
+                createItem("GET THE BEST FOOD","Tacos El Gordo","./img/TACOS.png",req_text,"tacosMucho@gmail.com","858-356-2135");                            
+                createItem("Catering Avaliable","Panda Express","./img/panda.jpg",req_text,"pandafoods@gmail.com","858-356-2135");                            
+                createItem("Spicy Flame Grilled","Mikes Persian Catering","./img/persian.jpg",req_text,"pcat@gmail.com","858-356-2135");                            
+            }
+            
+            function createItem(title,cname,photo,description,email,phone)
+            {
+                var itemDiv = document.createElement("div");
+                var titleH = document.createElement("h3");
+                var itemInfoDiv = document.createElement("div");
+                var item_pic = document.createElement("img");
+                var br = document.createElement("br");
+                var phone_number = document.createTextNode("Phone Number: "+phone+"\n");
+                var email = document.createTextNode("E-mail: "+email);               
+                var req_text = document.createElement("div");
+                var text = document.createTextNode(description);
+                var info_button = document.createElement("BUTTON");
 
-        <div class="client">
-            <h3>Tacos El Gordo</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="img/TACOS.png" alt="Person" height="270" ><br><br>
-                            Phone-Number: 858-356-2135<br>
-                            E-mail: tacosMucho@gmail.com
-                        </td>
-                        <td>
-                            <div class="request-text" style="border:1px solid black;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
-        </div>		
-		
-		
-        <div class="client">
-            <h3>Mikes Persian Catering</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="img/persian.jpg" alt="Person" height="270" ><br><br>
-                            Phone-Number: 858-356-2135<br>
-                            E-mail: @gmail.com
-                        </td>
-                        <td>
-                            <div class="request-text" style="border:1px solid black;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
-        </div>			
- 
-        <div class="client">
-            <h3>Panda Express</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="img/panda.jpg" alt="Person" height="270" ><br><br>
-                            Phone-Number: 858-356-2135<br>
-                            E-mail: pandafoods@gmail.com
-                        </td>
-                        <td>
-                            <div class="request-text" style="border:1px solid black;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            <button class="accept-button" onclick="alert('This will take you to webpage with more detailed info about vendor')">View</button>
-        </div>	
-		
-	    <!--Search for a business to provide the selected service.<br>
-        <a href="business_listing.html">Example Business #1</a>-->
+                                
+                itemDiv.className = "client";
+                itemInfoDiv.className = "client-info";
+                item_pic.className = "client-picture";
+                req_text.className = "request-text";
+                info_button.className = "accept-button";
+
+                
+                titleH.innerHTML = cname;
+                item_pic.setAttribute("src",photo);
+                item_pic.setAttribute("alt","./img/diagonal.jpg");  
+                info_button.innerHTML = "View";                
+                info_button.onclick = function (){window.location.href="business_listing.html";} ;
+
+    
+                itemInfoDiv.appendChild(item_pic);
+                itemInfoDiv.appendChild(br);
+                itemInfoDiv.appendChild(phone_number);
+                itemInfoDiv.appendChild(br);
+                itemInfoDiv.appendChild(email);
+                
+                req_text.appendChild(text);                
+                itemDiv.appendChild(titleH);
+                itemDiv.appendChild(itemInfoDiv);
+                itemDiv.appendChild(req_text);
+                itemDiv.appendChild(info_button);
+                
+                document.getElementById("sresultidBS").appendChild(itemDiv);
+                //alert("one element added");
+            }
+        </script>		
     </body>
 </html>
