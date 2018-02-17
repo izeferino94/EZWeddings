@@ -90,6 +90,7 @@ body {
     padding: 12px 30px;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s;
@@ -103,7 +104,7 @@ body {
 }
 
 /* Page content ---------------------------------------------*/
-#client-picture {
+#business-picture {
     max-width: 100%;
     height: auto;
 }
@@ -111,6 +112,7 @@ body {
 #contact-info {
     font-size: 1.1em;
 }
+ 
 
 .chat-msg {
     text-align: left;
@@ -138,7 +140,6 @@ body {
     overflow-y: scroll;
     border: 0; 
 }
-
 
 /* Add to do item modal ------------------------------------*/
 .modal {

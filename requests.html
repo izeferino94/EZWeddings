@@ -7,78 +7,18 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/requests.css">
-
     </head>
-    <body>
+    <body onload="loadInfo()">
         <ul id="nav-bar">
             <li class="nav-item"><a href="business_account.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
             <li class="nav-item"><a href="business_settings.html">Settings</a></li>
             <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
         </ul>
-        
         <div class="title">
           <img id="title-img" src="img/title_bg4.jpeg" alt="couple">
           <div class="title-centered"><h1>Requests</h1></div>
         </div>
-        
-            <div class="client">
-                <h3>Rosa Melano</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="client-picture" src=img/client2.jpeg alt="Person"><br>
-                                Phone-Number: 888-888-8888<br>
-                                E-mail: rosa_melano@gmail.com
-                            </td>
-                            <td>
-                                <div class="request-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="deny-button" onclick="alert('This will deny the person and remove them from here')">Deny</button>
-                <button class="accept-button" onclick="alert('This will add person to your clients list and add you to their businesses list')">Accept</button>
-            </div>
-            <div class="client">
-                <h3>Rosa Melano</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="client-picture" src=img/client2.jpeg alt="Person"><br>
-                                Phone-Number: 888-888-8888<br>
-                                E-mail: rosa_melano@gmail.com
-                            </td>
-                            <td>
-                                <div class="request-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="deny-button" onclick="alert('This will deny the person and remove them from here')">Deny</button>
-                <button class="accept-button" onclick="alert('This will add person to your clients list and add you to their businesses list')">Accept</button>
-            </div>
-            <div class="client">
-                <h3>Rosa Melano</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <img class="client-picture" src=img/client2.jpeg alt="Person"><br>
-                                Phone-Number: 888-888-8888<br>
-                                E-mail: rosa_melano@gmail.com
-                            </td>
-                            <td>
-                                <div class="request-text" style="border:1px solid black;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel imperdiet lorem. Donec consequat quam quis ante mattis tincidunt. Curabitur eros nunc, condimentum sed leo elementum, placerat venenatis ipsum. Phasellus nulla velit, venenatis eget lorem id, cursus molestie erat. Ut neque ante, consectetur venenatis imperdiet ac, volutpat id libero. Sed sed lorem dignissim, bibendum lacus eget, tincidunt justo. Maecenas eu quam eget velit commodo hendrerit vel eu odio. Pellentesque eget auctor lorem, vitae efficitur ligula. Proin posuere augue eu lorem auctor consequat. Proin sit amet volutpat nisi, at tristique tellus. Maecenas in nisi vitae dui volutpat luctus eget eget elit. Nunc urna diam, dictum sed nisl sed, consectetur aliquam dui. Aenean gravida, ante eu sagittis lacinia, lorem felis convallis diam, vel suscipit libero neque ac tortor. Maecenas tempus libero vitae urna sollicitudin luctus. Ut in purus a eros condimentum tempus non sed elit. Praesent vitae lacus finibus metus condimentum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel quam eu turpis blandit facilisis in quis nunc. Sed nec ipsum sed sem elementum feugiat.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <button class="deny-button" onclick="alert('This will deny the person and remove them from here')">Deny</button>
-                <button class="accept-button" onclick="alert('This will add person to your clients list and add you to their businesses list')">Accept</button>
-            </div>
-
+        <script src="js/requests.js"></script>
     </body>
 </html>
