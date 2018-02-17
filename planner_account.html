@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Planner</title>
+        <title>Client</title>
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
-        <link rel="stylesheet" href="business.css">
-		<style>
-		#list-container22 {
-            height: 380px;
-            overflow-y: scroll;
-            border: 0; 
-        }
-		
-		#todo-list22 {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            background-color: #333;
-        }
-
-		
-		</style>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/planner_account.css">
     </head>
-    <body>
+    <body onload="loadInfo()">
         <ul id="nav-bar">
-            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="login.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
+            <li class="nav-item"><a href="planner_account.html">Home</a></li>
             <li class="nav-item"><a href="planner_settings.html">Settings</a></li>
             <li class="nav-item" style="float:right"><a class="active" href="index.html">Logout</a></li>
         </ul>
         
         <div class="title">
-          <img id="title-img" src="img/title_bg.jpeg" alt="beach">
-          <div class="title-centered"><h1>EZWeddings</h1></div>
-        </div>
-        <div style="text-align:  center;">
-            
-            <div class="page-section3">
-                <h3>Need Assistance</h3>
-                <img id="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue"><br>
-                <p id="contact-info">
-                    <b>Phone-Number:</b> <i>858-356-2135</i><br>
-                    <b>E-mail:</b> <i>info.frcc@bayclubs.com</i><br>
-                    <b>Address:</b> <i>15150 San Dieguito Road, Rancho Santa Fe, CA 92067</i><br>
-                </p>
-            </div>
-            
-            <div class="page-section2">
-                <h2 >Planner</h2>
-                <div id="list-container">
-                    <ul id="todo-list">
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-         <div class="page-section4">
-                <h2 >Business Hired</h2>
-                <div id="list-container22">
-                    <ul id="todo-list22">
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #1</a></li>
-                        <li class="todo-item" onclick="alert('This will be a pop-up form for editing items, need to implement with JS.')"><a>pending thing #2</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                        <li class="todo-item"><a>Testing scroll...</a></li>
-                    </ul>
-                </div>
-            </div>
-            
+          <img id="title-img" src="#" alt="wedding">
+          <div class="title-centered"><h1></h1></div>
         </div>
         
+        <div style="text-align: center;">
+            <div class="page-section">
+                <h3>My Plan</h3>
+                <div class="list-container">
+                    <ul id="todo-list">
+                    </ul>
+                </div>
+                <button id="todo-list-add" onclick="showModal()">Add</button>
+            </div>
+            
+            <div class="page-section">
+                <h3>Search business for...</h3>
+                <div class="list-container">
+                    <ul id="business-types">
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Add new todo modal -->
+            <div id="add-item-modal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Add To Do Item</h2>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <input id="add-modal-text" class="modal-input" placeholder="To do" type="text" required />
+                    <input class="modal-submit" type="button" value="Add Item" onclick="addTodoItem()"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Edit todo modal -->
+            <div id="edit-item-modal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Edit To Do Item</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="modal-form">
+                    <input id="edit-modal-text" class="modal-input" placeholder="To do" type="text" required>
+                    <input type="radio" name="progress" value="in_progress" onchange="progress()"> In Progress
+                    <input type="radio" name="progress" value="finished" onchange="progress();"> Finished<br/>
+                    <input class="edit-button" type="button" value="Delete" onclick="deleteTodoItem()"/>
+                    <input class="edit-button" type="button" value="Update" onclick="editTodoItem()"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="js/planner_account.js"></script>
     </body>
 </html>
