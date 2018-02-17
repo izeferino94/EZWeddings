@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/businesses_list.css">
     </head>
-    <body>
+    <body onload="loadInfo()">
         <ul id="nav-bar">
             <li class="nav-item"><a href="planner_account.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="planner_account.html">Home</a></li>
@@ -21,26 +21,8 @@
           <div class="title-centered"><h1>Collaborators</h1></div>
         </div>
         
-        <div style="text-align: center;">
-            <a href="business.html">
-                <div class="business">
-                        <h3>Venue: Fairbanks Ranch Country Club</h3>
-                        <img class="business-picture" src=img/wedding_venue_1.jpg alt="Wedding Venue">
-                </div>
-            </a>
-            <a href="business.html">
-                <div class="business">
-                        <h3>Food: Tacos El Gordo</h3>
-                        <img class="business-picture" src=img/TACOS.png alt="Tacos El Gordo">
-                </div>
-            </a>
-            <a href="business.html">
-                <div class="business">
-                    <h3>Entertainment: Banda MS</h3>
-                    <img class="business-picture" src=img/banda_ms.jpg alt="Banda MS">
-                </div>
-            </a>
+        <div id="business-list" style="text-align: center;">
         </div>
-        
+        <script src="js/businesses_list.js"></script>
     </body>
 </html>
