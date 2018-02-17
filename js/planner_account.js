@@ -91,7 +91,7 @@ function loadBusinessSearch() {
     }
 }
 
-function progress() {
+function progress_change() {
     var radios = document.getElementsByName("progress");
 
     for (var i = 0, length = radios.length; i < length; i++) {
