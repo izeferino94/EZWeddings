@@ -69,8 +69,8 @@
                 <div class="modal-body">
                   <form class="modal-form">
                     <input id="edit-modal-text" class="modal-input" placeholder="To do" type="text" required>
-                    <input type="radio" name="progress" value="in_progress" onchange="progress()"> In Progress
-                    <input type="radio" name="progress" value="finished" onchange="progress();"> Finished<br/>
+                    <input type="radio" name="progress" value="in_progress" onchange="progress_change()"> In Progress
+                    <input type="radio" name="progress" value="finished" onchange="progress_change()"> Finished<br/>
                     <input class="edit-button" type="button" value="Delete" onclick="deleteTodoItem()"/>
                     <input class="edit-button" type="button" value="Update" onclick="editTodoItem()"/>
                   </form>
