@@ -19,7 +19,7 @@
                 background-color: #F1F1F1;
             }
             
-            #pageblock{
+            #pageblockPS{
                 background-color: white;
 
                 width: 600px;
@@ -30,7 +30,7 @@
                 font-size: 18px;                 
             }
             
-            #scontent{
+            #scontentPS{
                 margin-left: 25px;
             }
             
@@ -65,25 +65,51 @@
                 background: #1C7ABA;
             }            
             
-            #lastnameid{
+            #lnameidPS{
                 margin-left: 12px;
             }
             
-            #p1{
+            #p1PS{
                 float: left;
             }           
             
-            #p2{
+            #p2PS{
                 float:right;
                 margin-right: 195px;
             } 
             
-            #nameid{
+            #nameidPS{
                 overflow: hidden;
             }
         </style>
+        <script>
+            var user = {}; 
+            user["fname"] = "Shack";
+            user["lname"] = "ElOniel";         
+            user["email"] = "bBallin@aol.com";
+            user["password"] = "********";
+            user["phone"] = "818-324-6342";  
+        
+            function populate(){              
+                document.getElementById("fnameidPS").value = user["fname"];
+                document.getElementById("lnameidPS").value = user["lname"] ;         
+                document.getElementById("emailidPS").value = user["email"];
+                document.getElementById("pwordidPS").value = user["password"];
+                document.getElementById("phoneidPS").value = user["phone"];           
+            }
+            
+            function saveChanges(){                
+                user["fname"] = document.getElementById("fnameidPS").value;
+                user["lname"] = document.getElementById("lnameidPS").value;      
+                user["email"] = document.getElementById("emailidPS").value;
+                user["password"] = document.getElementById("pwordidPS").value;
+                user["phone"] = document.getElementById("phoneidPS").value;
+                
+                return false;
+            }    
+        </script>
     </head>
-    <body>
+    <body onload="populate()">
         <ul id="nav-bar">
             <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
@@ -96,38 +122,37 @@
           <div class="title-centered"><h1>Planner Settings</h1></div>
         </div>
     
-        <div id="pageblock">
-            <div id="scontent"> <br>
-                <form>
-                   <div id="nameid">
-                       <p id="p1">First Name</p>
-                       <p id="p2">Last Name</p>
+        <div id="pageblockPS">
+            <div id="scontentPS"> <br>
+                <form onsubmit="return saveChanges()" method="post">
+                   <div id="nameidPS">
+                       <p id="p1PS">First Name</p>
+                       <p id="p2PS">Last Name</p>
                        <br>
-                       <input type="text" name="firstname" value="Shack">          
-                
-                       <input id="lastnameid" type="text" name="lastname" value="ElOniel">
+                       <input id="fnameidPS" type="text" name="firstname">         
+                       <input id="lnameidPS" type="text" name="lastname">
                        <br>
                    </div>
                    
                    <br>Photo:<br>
                    <img src="./img/diagonal.jpg" width="255" height="200" alt="tacos.jpeg">
                    <br>
-                   <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                   <input id ="photoidPS" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
                    <br>
                    
                    <br>
                    Email:<br>
-                   <input type="email" name="email" value="bBallin@aol.com">
+                   <input id="emailidPS" type="email" name="email">
                    <br>
                    
                    <br>
                    Password:<br>
-                   <input type="password" name="password" value="********">
+                   <input id="pwordidPS" type="password" name="password">
                    <br>
                    
                    <br>
                    Phone number:<br>
-                   <input type="tel" name="pnumber" value="818-324-6342">
+                   <input id="phoneidPS" type="tel" name="pnumber">
                    <br>   
                     
                    <br>

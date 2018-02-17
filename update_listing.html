@@ -19,7 +19,7 @@
                 background-color: #F1F1F1;
             }
             
-            #pageblock{
+            #pageblockidUL{
                 background-color: white;
 
                 width: 600px;
@@ -30,7 +30,7 @@
                 font-size: 18px;                 
             }
             
-            #scontent{
+            #scontentidUL{
                 margin-left: 25px;
             }
             
@@ -43,10 +43,6 @@
                 width: 555px;                
             }
 
-            #firstnameid,#lastnameid{
-                width: 270px;                
-            }
-            
             input[type=submit]{                
                 padding: 8px 12px 8px 12px;    
                 text-align: center;        
@@ -63,11 +59,39 @@
             
             input[type=submit]:hover{
                 background: #1C7ABA;
-            }
-           
+            }                 
         </style>            
+        <script>
+            var listing = {}; 
+            listing["title"] = "Fast Catering with drinks!";
+            listing["cname"] = "Rico's Tasty Enchilladas";    
+            listing["description"] = "eat some home made fresh flame grilled yum yum food";            
+            listing["email"] = "rtEch@aol.com";
+            listing["phone"] = "818-324-6342";  
+            listing["address"] = "123 balcony ave, La Jolla, CA";  
+            
+            function populate(){              
+                document.getElementById("titleidUL").value = listing["title"];
+                document.getElementById("cnameidUL").value = listing["cname"];     
+                document.getElementById("descriptionidUL").value = listing["description"];
+                document.getElementById("emailidUL").value = listing["email"];
+                document.getElementById("phoneidUL").value = listing["phone"];  
+                document.getElementById("addressidUL").value = listing["address"];                 
+            }
+            
+            function saveChanges(){  
+                listing["title"] = document.getElementById("titleidUL").value; 
+                listing["cname"] = document.getElementById("cnameidUL").value;  
+                listing["description"] = document.getElementById("descriptionidUL").value;     
+                listing["email"] = document.getElementById("emailidUL").value;  
+                listing["phone"] = document.getElementById("phoneidUL").value; 
+                listing["address"] = document.getElementById("addressidUL").value; 
+            
+                return false;
+            }               
+        </script>              
     </head>
-        <body>
+        <body onload="populate()">
             <ul id="nav-bar">
             <li class="nav-item"><a href="clients_list.html"><i class="material-icons" style="font-size:18px!important;">arrow_back</i></a></li>
             <li class="nav-item"><a href="business_account.html">Home</a></li>
@@ -80,43 +104,43 @@
           <div class="title-centered"><h1>Update Listing</h1></div>
         </div>
     
-        <div id="pageblock">
-            <div id="scontent"> 
+        <div id="pageblockidUL">
+            <div id="scontentidUL"> 
                 <br>         
                 <form>
                     Title:<br>
-                    <input type="text" name="name" value="Wholesale Pizza For you">          
+                    <input id="titleidUL" type="text" name="name">          
 	                <br>
                     
                     <br>
                     Company Name:<br>
-                    <input id="cnameid" type="text" name="name" value="Cube Table">          
+                    <input id="cnameidUL" type="text" name="name">          
 	                <br>
                 
                     <br>Photo:<br>
                     <img src="./img/diagonal.jpg" width="255" height="200" alt="tacos.png">
                     <br>
-                    <input id ="photo" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
+                    <input id ="photoidUL" type="file" name="photo" accept="image/gif, image/jpeg, image/png" onchange="displayImg()">
                     <br>
 	            
 	                <br>
                     Description<br>
-                    <input type="text" name="description" value="make some square pies for customers under the sky">          
+                    <input id="descriptionidUL" type="text" name="description">          
 	                <br>
                 
 	                <br>
     	            Email:<br>
-                    <input type="email" name="email" value="squarefoods@gmail.com">
+                    <input id="emailidUL" type="email" name="email">
 	                <br>
                 
 	                <br>
     	            Phone number:<br>
-                    <input type="tel" name="pnumber" value="818-143-5323">
+                    <input id="phoneidUL" type="tel" name="pnumber">
 	                <br>
                 
 	                <br>
     	            Address:<br>
-                    <input type="text" name="address" value="123 balcony ave, La Jolla, CA">
+                    <input id="addressidUL" type="text" name="address">
 	               <br>
                 
 	            
