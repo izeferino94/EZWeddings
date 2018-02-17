@@ -37,5 +37,5 @@ function generate_client(id, name, img_src) {
 
 function setClient(id) {
     localStorage.setItem("view_client", id);
-    window.location.href = "/client.html";
+    window.location.href = "client.html";
 }
